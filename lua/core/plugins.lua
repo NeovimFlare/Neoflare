@@ -25,7 +25,7 @@ return {
       desc = "Flash Treesitter",
     },
     {
-      "r",
+      "t",
       mode = "o",
       function()
         require("flash").remote()
@@ -33,7 +33,7 @@ return {
       desc = "Remote Flash",
     },
     {
-      "R",
+      "T",
       mode = { "o", "x" },
       function()
         require("flash").treesitter_search()
@@ -48,6 +48,7 @@ return {
       end,
       desc = "Toggle Flash Search",
     },
+  },
   },
   { "sunjon/stylish.nvim", event="VeryLazy" },
   { "nvim-telescope/telescope.nvim",},
