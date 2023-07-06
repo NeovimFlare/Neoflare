@@ -7,6 +7,7 @@ It aims to provide a consistent and streamlined experience across devices
  - 💤 A Lazy package manager
  - 🔥 Turn your neovim into a IDE
  - 📸 Git support
+ - 🐇 Leaping with the [flash.nvim!](https://github.com/folke/flash.nvim)
 
 ## Requirement
  - Neovim >= 0.8.0 (needs to be built with LuaJIT)
