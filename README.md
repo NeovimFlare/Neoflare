@@ -1,5 +1,5 @@
 # 🔥 Neoflare
-![Untitled18_20230706183511](https://media.discordapp.net/attachments/1081213475331788812/1126587090432446564/Untitled18_20230706183511.png?width=1200&height=326) 
+![Untitled18_20230706183511](https://media.discordapp.net/attachments/1081213475331788812/1126587090432446564/Untitled18_20230706183511.png?width=1200&height=526) 
 Neoflare is a custom Neovim configuration designed to be used on both mobile (using Termux) and PC environments.
 It aims to provide a consistent and streamlined experience across devices
 
