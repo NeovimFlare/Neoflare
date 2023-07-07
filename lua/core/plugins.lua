@@ -2,6 +2,7 @@ return {
   { "MunifTanjim/nui.nvim", lazy = true },
   { "nvim-lua/plenary.nvim", lazy = true },
   { "github/copilot.vim", lazy = true },
+  { "ray-x/guihua.lua", lazy = true },
 {
   "folke/flash.nvim", lazy = true,
   event = "VeryLazy",
