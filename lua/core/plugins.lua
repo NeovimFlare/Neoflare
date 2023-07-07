@@ -1,9 +1,9 @@
 return {
-  { "MunifTanjim/nui.nvim" },
-  { "nvim-lua/plenary.nvim" },
-  { "github/copilot.vim" },
+  { "MunifTanjim/nui.nvim", lazy = true },
+  { "nvim-lua/plenary.nvim", lazy = true },
+  { "github/copilot.vim", lazy = true },
 {
-  "folke/flash.nvim",
+  "folke/flash.nvim", lazy = true,
   event = "VeryLazy",
   ---@type Flash.Config
   opts = {},
@@ -50,12 +50,12 @@ return {
     },
   },
   },
-  { "sunjon/stylish.nvim", event="VeryLazy" },
-  { "nvim-telescope/telescope.nvim",},
-  { "rebelot/kanagawa.nvim", event = "VimEnter" },
-  { "lukas-reineke/indent-blankline.nvim", event="VimEnter" },
+  { "sunjon/stylish.nvim", event="VeryLazy", lazy = true },
+  { "nvim-telescope/telescope.nvim", lazy = true },
+  { "rebelot/kanagawa.nvim", event = "VeryLazy", lazy = true },
+  { "lukas-reineke/indent-blankline.nvim", event="VeryLazy", lazy = true },
    {
-    "williamboman/mason.nvim",
+    "williamboman/mason.nvim", lazy = true,
     opts = {
       ensure_installed = {
 	"lua-language-server",
@@ -67,27 +67,27 @@ return {
     },
   },
   {
-    "nvim-tree/nvim-tree.lua",
-    event = "VimEnter",
+    "nvim-tree/nvim-tree.lua", lazy = true,
+    event = "VeryLazy",
   },
-  { "rafi/awesome-vim-colorschemes", event = "VimEnter" },
-  { "akinsho/bufferline.nvim", event = "VimEnter",},
-  { "nvim-lualine/lualine.nvim", event = "VimEnter", dependencies = "nvim-tree/nvim-web-devicons", dependencies = {'tpope/vim-fugitive'},
+  { "rafi/awesome-vim-colorschemes", event = "VeryLazy", lazy = true },
+  { "akinsho/bufferline.nvim", event = "VeryLazy", lazy = true },
+  { "nvim-lualine/lualine.nvim", event = "VeryLazy", lazy = true,  dependencies = { "nvim-tree/nvim-web-devicons", 'tpope/vim-fugitive' },
   },
-  {"nvim-treesitter/nvim-treesitter", event = "VimEnter"
+  {"nvim-treesitter/nvim-treesitter", event = "VeryLazy", lazy = true
   },
   {
-    'hapless12/alpha',
-    event = "VimEnter",
+    'hapless12/alpha', lazy = true,
+    event = "VeryLazy",
     dependencies = { 'nvim-tree/nvim-web-devicons' },
 
   },
 {
- "lewis6991/gitsigns.nvim",
+ "lewis6991/gitsigns.nvim", lazy = true,
  event = "BufReadPre",
 },
 {
-  "folke/noice.nvim",
+  "folke/noice.nvim", lazy = true,
   event = "VeryLazy",
   opts = {
     -- add any options here
@@ -102,7 +102,7 @@ return {
     },
    },
   {
- "hrsh7th/nvim-cmp",
+ "hrsh7th/nvim-cmp", lazy = true,
  event = "InsertEnter",
  dependencies = {
   "saadparwaiz1/cmp_luasnip",
@@ -115,7 +115,7 @@ return {
   }
  },
   {
-    "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig", lazy = true,
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
@@ -127,7 +127,7 @@ return {
         },
       },
     },
-    {"L3MON4D3/LuaSnip", event = "VeryLazy"},
+    {"L3MON4D3/LuaSnip", event = "VeryLazy", lazy = true },
  {
   "folke/which-key.nvim",
   event = "VeryLazy",
@@ -137,34 +137,34 @@ return {
     -- refer to the configuration section below
   },
 },
-  { "folke/trouble.nvim", event = "VimEnter" },
+  { "folke/trouble.nvim", event = "VeryLazy", lazy = true },
   {
-    "FeiyouG/command_center.nvim",
+    "FeiyouG/command_center.nvim", lazy = true,
     dependencies = { "nvim-telescope/telescope.nvim" },
-    event = "VimEnter",
+    event = "VeryLazy",
   },
-  { "nvim-treesitter/nvim-treesitter", event = "VimEnter" },
-  { "ray-x/navigator.lua", event = "VimEnter" },
+  { "nvim-treesitter/nvim-treesitter", event = "VeryLazy", lazy = true },
+  { "ray-x/navigator.lua", event = "VeryLazy", lazy = true },
   {
-    "akinsho/toggleterm.nvim",
-    event = "VimEnter",
+    "akinsho/toggleterm.nvim", lazy = true,
+    event = "VeryLazy",
   },
-  { 'rcarriga/nvim-notify', event = "VimEnter",
+  { 'rcarriga/nvim-notify', event = "VeryLazy", lazy = true,
   },
-  { "catppuccin/nvim", name = "catppuccin", event = "VimEnter",
+  { "catppuccin/nvim", name = "catppuccin", event = "VeryLazy", lazy = true
   },
-  { "EdenEast/nightfox.nvim", event = "VimEnter" },
-  { "ellisonleao/gruvbox.nvim", event = "VimEnter" },
+  { "EdenEast/nightfox.nvim", event = "VeryLazy", lazy = true },
+  { "ellisonleao/gruvbox.nvim", event = "VeryLazy", lazy = true },
   {
-    "mbbill/undotree",
+    "mbbill/undotree", lazy = true,
     cmd = { "UndotreeShow", "UndotreeToggle", "UndotreeHide", "UndotreeFocus" },
-    event = "VimEnter",
+    event = "VeryLazy",
   },
-  { "NvChad/nvim-colorizer.lua", ft = { "css" }, event = "VimEnter" },
+  { "NvChad/nvim-colorizer.lua", ft = { "css" }, event = "VeryLazy", lazy = true },
   {
-    "dstein64/vim-startuptime",
+    "dstein64/vim-startuptime", lazy = true,
     cmd = "StartupTime",
-    event = "VimEnter",
+    event = "VeryLazy",
   },
-  { "folke/tokyonight.nvim", event = "VimEnter" },
+  { "folke/tokyonight.nvim", event = "VeryLazy" },
 }
