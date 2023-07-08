@@ -1,6 +1,11 @@
 vim.notify = require('notify')
 
-require("nvim-tree").setup{}
+require("neo-tree").setup({
+        source_selector = {
+            winbar = true,
+            statusline = true
+        }
+    })
 
 require('nvim-treesitter').setup()
 

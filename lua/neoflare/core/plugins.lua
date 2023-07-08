@@ -20,7 +20,7 @@ return {
     },
   },
   {
-    "nvim-tree/nvim-tree.lua", lazy = true,
+    "nvim-neo-tree/neo-tree.nvim", lazy = true,
     event = "VeryLazy",
   },
 { "akinsho/toggleterm.nvim", lazy = true, event = "VeryLazy", },
