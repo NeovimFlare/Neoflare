@@ -3,54 +3,6 @@ return {
   { "nvim-lua/plenary.nvim", lazy = true },
   { "github/copilot.vim", lazy = true },
   { "ray-x/guihua.lua", lazy = true, event = "VeryLazy" },
-{
-  "folke/flash.nvim", lazy = true,
-  event = "VeryLazy",
-  ---@type Flash.Config
-  opts = {},
-  keys = {
-    {
-      "<A-s>",
-      mode = { "n", "x", "o" },
-      function()
-        require("flash").jump()
-      end,
-      desc = "Flash",
-    },
-    {
-      "<A-S>",
-      mode = { "n", "o", "x" },
-      function()
-        require("flash").treesitter()
-      end,
-      desc = "Flash Treesitter",
-    },
-    {
-      "t",
-      mode = "o",
-      function()
-        require("flash").remote()
-      end,
-      desc = "Remote Flash",
-    },
-    {
-      "T",
-      mode = { "o", "x" },
-      function()
-        require("flash").treesitter_search()
-      end,
-      desc = "Flash Treesitter Search",
-    },
-    {
-      "<c-s>",
-      mode = { "c" },
-      function()
-        require("flash").toggle()
-      end,
-      desc = "Toggle Flash Search",
-    },
-  },
-  },
   { "sunjon/stylish.nvim", event="VeryLazy", lazy = true },
   { "nvim-telescope/telescope.nvim", lazy = true },
   { "rebelot/kanagawa.nvim", event = "VeryLazy", lazy = true },
