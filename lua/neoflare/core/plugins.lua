@@ -71,6 +71,7 @@ return {
     "nvim-tree/nvim-tree.lua", lazy = true,
     event = "VeryLazy",
   },
+{ "akinsho/toggleterm.nvim", lazy = true, event = "VeryLazy", },
   { "rafi/awesome-vim-colorschemes", event = "VeryLazy", lazy = true },
   { "akinsho/bufferline.nvim", event = "VeryLazy", lazy = true },
   { "nvim-lualine/lualine.nvim", event = "VeryLazy", lazy = true,  dependencies = { "nvim-tree/nvim-web-devicons", 'tpope/vim-fugitive' },
@@ -78,9 +79,9 @@ return {
   {"nvim-treesitter/nvim-treesitter", event = "VeryLazy", lazy = true
   },
   {
-    'hapless12/alpha', lazy = true,
+    'NeovimFlare/alpha', lazy = true,
     event = "VeryLazy",
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    dependencies = { 'nvim-tree/nvim-web-devicons', "akinsho/toggleterm.nvim", "nvim-tree/nvim-tree.lua", },
 
   },
 {
@@ -146,10 +147,6 @@ return {
   },
   { "nvim-treesitter/nvim-treesitter", event = "VeryLazy", lazy = true },
   { "ray-x/navigator.lua", event = "VeryLazy", lazy = true },
-  {
-    "akinsho/toggleterm.nvim", lazy = true,
-    event = "VeryLazy",
-  },
   { 'rcarriga/nvim-notify', event = "VeryLazy", lazy = true,
   },
   { "catppuccin/nvim", name = "catppuccin", event = "VeryLazy", lazy = true
