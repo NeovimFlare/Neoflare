@@ -19,7 +19,7 @@ set termguicolors
 set number
 ]])
 
-require("lazy").setup("core.plugins", {
+require("lazy").setup("neoflare.core.plugins", {
  defaults = { lazy = true },
  install = { colorscheme = { "tokyonight" } },
  checker = { enabled = true },
