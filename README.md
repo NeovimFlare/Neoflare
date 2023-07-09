@@ -7,16 +7,20 @@ It aims to provide a consistent and streamlined experience across devices
  - 💤 A Lazy package manager
  - 🔥 Turn your neovim into a IDE
  - 📸 Git support
- - 🐇 Leaping with the [flash.nvim!](https://github.com/folke/flash.nvim)
 
 ## Requirement
- - Neovim >= 0.8.0 (needs to be built with LuaJIT)
- - Git >= 2.19.0 (for partial clones support)
+ - Neovim >= 0.8.0
+ - Git >= 2.19.0
  - a Nerd Font (optional)
  - a C compiler for nvim-treesitter
 
 # Installation
 ### Linux/Mac
+`git clone https://github.com/Dynamitebumblemouth/Neoflare ~/.config/nvim`
+
+### Termux
+First install "git" by typing `pkg install git` and installing neovim by `pkg install neovim`
+Once you have them installed type this
 `git clone https://github.com/Dynamitebumblemouth/Neoflare ~/.config/nvim`
 
 ### Windows
