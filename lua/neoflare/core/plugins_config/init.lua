@@ -144,6 +144,7 @@ require("mason-lspconfig").setup({
 	  "clangd",
 	  "tailwindcss",
 	  "rust_analyzer",
+	  "html",
   }
 })
 
@@ -153,3 +154,4 @@ require("lspconfig").clangd.setup {}
 require("lspconfig").tailwindcss.setup {}
 require("lspconfig").rust_analyzer.setup {}
 require("lspconfig").tsserver.setup {}
+require("lspconfig").html.setup {}
