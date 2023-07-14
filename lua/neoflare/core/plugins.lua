@@ -2,6 +2,7 @@ return {
   { "MunifTanjim/nui.nvim", lazy = true },
   { "nvim-lua/plenary.nvim", lazy = true },
   { "github/copilot.vim", lazy = true },
+  { "nvim-lualine/lualine.nvim", lazy = true, event = "VeryLazy", dependencies="tpope/vim-fugitive", "nvim-tree/nvim-web-devicons", },
   { "ray-x/guihua.lua", lazy = true, event = "VeryLazy" },
   { "sunjon/stylish.nvim", event="VeryLazy", lazy = true },
   { "nvim-telescope/telescope.nvim", lazy = true },
@@ -26,7 +27,7 @@ return {
 { "akinsho/toggleterm.nvim", lazy = true, event = "VeryLazy", },
   { "rafi/awesome-vim-colorschemes", event = "VeryLazy", lazy = true },
   { "akinsho/bufferline.nvim", event = "VeryLazy", lazy = true },
-  { "nvim-lualine/lualine.nvim", event = "VeryLazy", lazy = true,  dependencies = { "nvim-tree/nvim-web-devicons", 'tpope/vim-fugitive' },
+  { "b0o/incline.nvim", event = "VeryLazy", lazy = true,  dependencies = { "nvim-tree/nvim-web-devicons", 'tpope/vim-fugitive' },
   },
   {"nvim-treesitter/nvim-treesitter", event = "VeryLazy", lazy = true
   },

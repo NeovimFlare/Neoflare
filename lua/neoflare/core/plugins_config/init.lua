@@ -1,4 +1,7 @@
+
 vim.notify = require('notify')
+
+
 
 require("neo-tree").setup({
         source_selector = {
@@ -16,7 +19,46 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 require("toggleterm").setup()
-
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = '',
+    section_separators = { right = '', left = '' },
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode',},
+    lualine_b = {'branch', 'diff',},
+    lualine_c = {'filetype', 'filename'},
+    lualine_x = {},
+    lualine_y = {'diagnostics'},
+    lualine_z = {'location',},
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
+ }
+}
 vim.api.nvim_set_keymap(
   'n',
   '<F12>',
@@ -36,12 +78,49 @@ amenu Plugin.NeovimTree.Open :NvimTreeOpen | amenu Plugin.NeovimTree.Toggle :Nvi
 amenu Plugin.ToggleTerm.Toggle :ToggleTerm
 ]]
 
-require('lualine').setup {
-  options = {
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
-  },
-}
+local function get_diagnostic_label(props)
+    local icons = {
+        Error = "",
+        Warn = "",
+        Info = "",
+        Hint = "",
+    }
+
+    local label = {}
+    for severity, icon in pairs(icons) do
+        local n = #vim.diagnostic.get(props.buf, {severity = vim.diagnostic.severity[string.upper(severity)]})
+        if n > 0 then
+            local fg = "#" .. string.format("%06x", vim.api.nvim_get_hl_by_name("DiagnosticSign" .. severity, true)["foreground"])
+            table.insert(label, {icon .. " " .. n .. " ", guifg = fg})
+        end
+    end
+    return label
+end
+
+require("incline").setup({
+  debounce_threshold = { falling = 500, rising = 250 },
+  render = function(props)
+    local bufname = vim.api.nvim_buf_get_name(props.buf)
+    local filename = vim.fn.fnamemodify(bufname, ":t")
+    local diagnostics = get_diagnostic_label(props)
+    local modified = vim.api.nvim_buf_get_option(props.buf, "modified") and "bold,italic" or "None"
+    local filetype_icon, color = require("nvim-web-devicons").get_icon_color(filename)
+
+    local buffer = {
+        { filetype_icon, guifg = color },
+        { " " },
+        { filename, gui = modified },
+    }
+
+    if #diagnostics > 0 then
+        table.insert(diagnostics, { "| ", guifg = "grey" })
+    end
+    for _, buffer_ in ipairs(buffer) do
+        table.insert(diagnostics, buffer_)
+    end
+    return diagnostics
+  end,
+})
 
 vim.cmd([[colorscheme catppuccin]])
 
@@ -147,6 +226,8 @@ require("mason-lspconfig").setup({
 	  "html",
   }
 })
+
+require('neoconf').setup({})
 
 require("lspconfig").lua_ls.setup{}
 require("lspconfig").pyright.setup {}
