@@ -16,12 +16,12 @@ It aims to provide a consistent and streamlined experience across devices
 
 # Installation
 ### Linux/Mac
-`git clone https://github.com/Dynamitebumblemouth/Neoflare ~/.config/nvim`
+`git clone https://github.com/NeovimFlare/Neoflare ~/.config/nvim`
 
 ### Termux
 First install "git" by typing `pkg install git` and installing neovim by `pkg install neovim`
 Once you have them installed type this
-`git clone https://github.com/Dynamitebumblemouth/Neoflare ~/.config/nvim`
+`git clone https://github.com/NeovimFlare/Neoflare ~/.config/nvim`
 
 ### Windows
-`git clone https://github.com/Dynamitebumblemouth/Neoflare $env:LOCALAPPDATA\nvim`
+`git clone https://github.com/NeovimFlare/Neoflare $env:LOCALAPPDATA\nvim`
