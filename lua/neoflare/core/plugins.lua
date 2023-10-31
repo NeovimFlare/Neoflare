@@ -1,4 +1,6 @@
 return {
+  { "zaldih/themery.nvim", lazy = true },
+  { "echasnovski/mini.map", lazy = true },
   { "MunifTanjim/nui.nvim", lazy = true },
   { "nvim-lua/plenary.nvim", lazy = true },
   { "github/copilot.vim", lazy = true },
@@ -7,7 +9,7 @@ return {
   { "sunjon/stylish.nvim", event="VeryLazy", lazy = true },
   { "nvim-telescope/telescope.nvim", lazy = true },
   { "rebelot/kanagawa.nvim", event = "VeryLazy", lazy = true },
-  { "lukas-reineke/indent-blankline.nvim", event="VeryLazy", lazy = true },
+  { "lukas-reineke/indent-blankline.nvim", event="VeryLazy", lazy = true, main="ibl" },
    {
     "williamboman/mason.nvim", lazy = true,
     opts = {
